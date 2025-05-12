@@ -5,7 +5,7 @@
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Mejora del Sistema de Apunte Automático mediante la integración de IoT para monitoreo, control y gestión remota} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 %\posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -16,21 +16,21 @@
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
 % IMPORTANTE: no omitir titulaciones ni tildación en los nombres, también se recomienda escribir los nombres completos (tal cual los tienen en su documento)
-\autor{Título y Nombre del autor}
+\autor{Esp. Ing. William's Ernesto Limonchi Sandoval}
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Título y Nombre del director}
-\pertenenciaDirector{pertenencia} 
+\director{Mg. Ing. Juan Carlos Espinoza Guerra}
+\pertenenciaDirector{Radio Observatorio de Jicamarca} 
 \codirector{} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Dr. Danny Scipión}
+\empresaCliente{Radio Observatorio de Jicamarca - IGP}
  
-\fechaINICIO{30 de abril de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2023} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2024}	%Fecha de defensa pública del trabajo final
+\fechaINICIO{08 de abril de 2025}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{18 de junio de 2025} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{15 de diciembre de 2025}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{red}{la implementación de un prototipo de un sistema de control de temperatura de una caldera industrial}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{red}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementar una mejora en el sistema actual que se tiene en el Radio Observatorio de Jicamarca. El trabajo tendrá un presupuesto preliminar estimado de 600 horas y un costo estimado de \$300, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -106,51 +106,62 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-El objetivo es que el lector, en una o dos páginas, exponga de qué se trata el proyecto y cuáles son sus desafíos, cuál es la motivación para realizarlo y su importancia.
+El Radio Observatorio de Jicamarca es una instalación de investigación científica gestionada por el Instituto Geofísico del Perú (IGP), reconocida mundialmente por sus estudios sobre la ionósfera. El sistema de apunte atuomático (ABS) fue diseñado originalmente para facilitar el cambio de apuntamiento de las antenas de manera manual o remota a través de Ethernet, asegurando la precisión requerida para estos experimentos. Sin embargo, a medida que los sistemas de monitoreo y gestión se han vuelto más sofisticados, ha surgido la necesidad de actualizar el sistema para mejorar la trazabilidad, mantenimiento y diagnóstico de fallos.
 
-Se debe introducir el contexto del proyecto, el estado del arte en la temática, describir la propuesta de valor, cuál es el problema que atiende y cuál es la solución que se propone. Se debe dar una descripción funcional de la solución que incluya un diagrama en bloques.
+El proyecto consiste en la mejora del sistema ABS del Radio Observatorio de Jicamarca, un sistema crítico para el control de antenas utilizadas en experimentos avanzados sobre la ionósfera terrestre. Esta mejora tiene como objetivo modernizar el sistema integrando tecnologías de Internet de las Cosas (IoT) para permitir el monitoreo, control y gestión remota de las operaciones, ampliando sus capacidades actuales y optimizando la eficiencia en el manejo de datos.
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+Actualmente, el sistema permite el control remoto del apuntamiento de antenas, pero carece de capacidades avanzadas para el registro de datos, diagnóstico proactivo y monitoreo ambiental, lo que puede comprometer la confiabilidad y disponibilidad del sistema. La propuesta es implementar una solución IoT que no solo mantenga las funciones básicas del sistema, sino que también integre:
 
 \begin{itemize}
-	\item ¿Cuál es el contexto del proyecto, es un emprendimiento personal, un proyecto para una empresa, es parte del programa de vinculación con empresas del posgrado?
-	\item ¿Existen o aplican condiciones especiales al proyecto, financiamiento de algún programa público o privado, acuerdos de confidencialidad, acuerdos sobre la propiedad intelectual de los entregables u otros?
-	\item ¿Cómo se compara la solución propuesta con el estado del arte en el campo de aplicación? ¿En qué aspectos destaca?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿En qué estado del ciclo de vida está la solución que se propone?
-	\item ¿Cuáles son las características del cliente (el adoptante de los entregables del proyecto) qué valora, qué necesita?
-	\item ¿Por dónde pasa la innovación?
+	\item Monitoreo de variables ambientales como la temperatura para detectar condiciones adversas.
+	\item Registro histórico de fallas y mantenimiento, mejorando la trazabilidad y análisis de fallos.
+	\item Gestión de datos en tiempo real mediante una interfaz web multiplataforma.
+	\item Desarrollo de shield personalizada para el monitoreo de temperatura.
 \end{itemize}
 
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y descripción funcional de la solución propuesta.
+El sistema propuesto incluye los siguientes componentes:
+\begin{itemize}
+    \item Microcontrolador TIVA TM4C1294 para control central.
+
+	\item Shield personalizado para protección y expansión modular de sensores adicionales.
+
+	\item Sensores ambientales, inicialmente de temperatura, con posibilidad de expansión.
+
+	\item Servidor MQTT para comunicación eficiente y escalable.
+
+	\item Base de datos local para almacenar y gestionar el historial de fallas y eventos.
+
+	\item Aplicación web para acceso multiplataforma a datos y configuraciones.
+
+	\item Seguridad en redes locales para garantizar acceso controlado.	
+\end{itemize}
+
+El diagrama en bloques del sistema se presenta en la Figura 1, donde se destacan los módulos de adquisición de datos, procesamiento, comunicación y visualización.
 
 Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase como la siguiente: ``En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''.  La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
 
 \begin{figure}[htpb]
-\centering 
-\includegraphics[width=.65\textwidth]{./Figuras/diagBloques.png}
-\caption{Diagrama en bloques del sistema.}
-\label{fig:diagBloques}
+	\centering 
+	\includegraphics[width=.65\textwidth]{./Figuras/diagBloques.png}
+	\caption{Diagrama en bloques del sistema.}
+	\label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
+
 
 El tamaño del texto en TODAS las figuras debe ser adecuado \textbf{para que NO pase lo que ocurre en la figura \ref{fig:diagBloques}}, donde el lector debe esforzarse para poder leer el texto. 
 
 Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama. Se recomienda evitar colores primarios (como rojo, verde o cyan) y usar la gama de colores pastel.
 
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-\textbf{Nota importante:} borrar esto y todas las consignas en color rojo antes de entregar este documento). Esto se hace eliminando el par de comandos que forman el bloque consigna, \verb!\begin{consigna}{red}! y \verb!\end{consigna}{red}! del código. 
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. Si se considera que una persona cumple dos o más roles, entonces \textbf{solo dejarla en el rol más importante}. 
-
-Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente. Si una persona es el Responsable, \textbf{no debe ser colocado también como miembro del equipo}.
+\begin{itemize}
+	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
+	\item Cliente: el Radio Observatorio de Jicamarca, interesado en el desarrollo del proyecto para implementarlo en las mejoras de los futuros experimentos a realizar.
+\end{itemize}
 
 
 \begin{table}[ht]
@@ -160,129 +171,126 @@ Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
+Auspiciante   & Radio Observatorio de     &    -          	&     -   	\\ \hline
+Cliente       & \clientename      &\empclientename	& -       	\\ \hline
 Impulsor      &                   &              	&        	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Colaboradores &                   &              	&        	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
+Equipo        & - \newline 
+				-          &   -           	&  -      	\\ \hline
 Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Usuario final &  Personal encargado en el sistema ABS           &              	&        	\\ \hline
 \end{tabularx}
 \end{table}
-
-El Director suele ser uno de los orientadores.
-
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Es deseable listar a continuación las principales características de cada interesado.
- 
-Por ejemplo:
-\begin{itemize}
-	\item Orientador: la Dra. Ing. María Gómez es experta en la temática y va a ayudar con la definición de los requerimientos y el desarrollo del firmware del embebido.
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-\end{itemize}
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
-
-Se recomienda que sea solo un párrafo que continúe con la idea de la frase ``el propósito de este proyecto es...'' (omitir la frase, ya que está en el título de la sección).
-\end{consigna}
+El propósito de este proyecto es desarrollar una actualización integral del Sistema de Apunte Automático (ABS) del Radio Observatorio de Jicamarca, incorporando tecnologías de Internet de las Cosas (IoT) para mejorar su capacidad de monitoreo, control y gestión remota. Esta mejora permitirá un registro más detallado de datos operativos, diagnóstico de fallas en tiempo real y una interfaz de usuario más accesible y eficiente, optimizando así el rendimiento y la disponibilidad del sistema para las exigentes investigaciones científicas que se realizan en esta instalación.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+El alcance de este proyecto incluye el diseño, desarrollo y despliegue de una solución IoT para mejorar el Sistema de Apunte Automático (ABS) del Radio Observatorio de Jicamarca. Específicamente, se contempla:
 
-Se refiere al trabajo que se va a hacer para entregar el producto o resultado especificado. 
-
-Explicitar todo lo quede comprendido dentro del alcance del proyecto. Por ejemplo:
-
-El proyecto incluye:
 \begin{itemize}
-	\item Ítem 1.
-	\item Ítem 2.
-		\begin{itemize}
-		\item Subítem 1.
-		\item Subítem 2.
-		\item ...
-		\end{itemize}
-	\item ...
-	
+	\item La integración de un sensor de temperatura como variable inicial para monitoreo ambiental, con posibilidad de expansión para otros sensores en futuras etapas.
+
+	\item El diseño y fabricación de un shield electrónico personalizado para protección y expansión modular del sistema, asegurando aislamiento eléctrico y compatibilidad con el microcontrolador TIVA TM4C1294.
+
+	\item La migración del protocolo de comunicación actual hacia MQTT para mejorar la eficiencia, escalabilidad y gestión de datos.
+
+	\item El desarrollo de una aplicación web multiplataforma para monitoreo y gestión del sistema, con almacenamiento local de datos históricos en contenedores Docker para mayor portabilidad y facilidad de mantenimiento.
+
+	\item La implementación de medidas básicas de seguridad en red local para restringir el acceso no autorizado.
+
+	\item Pruebas de funcionamiento y validación del sistema en condiciones reales en el Radio Observatorio de Jicamarca.
 \end{itemize}
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+El presente proyecto no incluye:
 
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
+\begin{itemize}
+	\item El desarrollo de aplicaciones móviles nativas para iOS o Android.
 
+	\item La implementación de algoritmos de inteligencia artificial o modelos predictivos para análisis de datos.
+
+	\item La integración con servicios en la nube para almacenamiento remoto o procesamiento avanzado de datos.
+
+	\item El rediseño físico o estructural del sistema de antenas o sus componentes mecánicos.
+
+	\item El suministro de infraestructura de red, como switches, routers o fibra óptica.
+\end{itemize}
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-``Para el desarrollo del presente proyecto se supone que: ...''
-
+Para el desarrollo del presente proyecto se supone que:
 \begin{itemize}
-	\item Supuesto 1.
-	\item Supuesto 2.
-	\item ...
+	\item El sistema actual del Radio Observatorio de Jicamarca está en condiciones operativas adecuadas para integrar las mejoras propuestas.
+
+	\item El microcontrolador TIVA TM4C1294 es compatible con el shield personalizado y los sensores adicionales que se implementarán.
+
+	\item Los sensores de temperatura y otros dispositivos de monitoreo estarán disponibles y serán compatibles con el entorno de operación del sistema ABS.
+
+	\item El equipo de trabajo contará con acceso a las instalaciones del observatorio para pruebas, instalación y validación del sistema.
+
+	\item El protocolo MQTT es adecuado para la transmisión de datos en el entorno local del observatorio, cumpliendo con los requisitos de latencia y estabilidad.
+
+	\item Se dispondrá del conocimiento técnico para diseñar e implementar las interfaces de comunicación, el shield personalizado y el sistema de almacenamiento de datos.
+
+	\item Las condiciones de red local serán suficientemente estables para permitir una conectividad constante entre el microcontrolador y el servidor de datos.
+
+	\item No se prevén cambios regulatorios significativos que afecten el uso de tecnologías IoT en el ámbito de las telecomunicaciones del observatorio.
+
+	\item Los recursos económicos y materiales necesarios para el diseño, fabricación y pruebas del shield personalizado estarán disponibles a lo largo del proyecto.
 \end{itemize}
-
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-Los requerimientos deben enumerarse y de ser posible estar agrupados por afinidad, por ejemplo:
-
 \begin{enumerate}
 	\item Requerimientos funcionales:
-		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
-		\end{enumerate}
-	\item Requerimientos de documentación:
-		\begin{enumerate}
-			\item Requerimiento 1.
-			\item Requerimiento 2 (prioridad menor)
-		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+	\begin{enumerate}
+		\item El sistema debe permitir el monitoreo continuo de la temperatura en tiempo real. (Prioridad alta)
+		\item El sistema debe registrar y almacenar eventos críticos, fallas y cambios de apuntamiento en una base de datos local. (Prioridad alta)
+		\item El sistema debe permitir el control remoto del apuntamiento de antenas a través de una interfaz web multiplataforma. (Prioridad alta)
+		\item El sistema debe enviar notificaciones de fallas a dispositivos conectados en la red local. (Prioridad media)
+		\item La interfaz web debe ser compatible con navegadores modernos y adaptarse a dispositivos móviles. (Prioridad media)
+		\item El sistema debe permitir la descarga de registros históricos en formato CSV o similar para análisis externo. (Prioridad media)
+	\end{enumerate}
+	\item Requerimientos de Hardware:
+	\begin{enumerate}
+		\item Uso de un microcontrolador TIVA TM4C1294 como núcleo del sistema. (Prioridad alta)
+		\item Desarrollo de un shield electrónico personalizado para protección y expansión de sensores. (Prioridad alta)
+		\item Inclusión de al menos un sensor de temperatura compatible con el microcontrolador. (Prioridad alta)
+		\item  Fuente de alimentación y conversión de medios (fibra a Ethernet) para garantizar conectividad estable. (Prioridad alta)
+	\end{enumerate}
+	\item Requerimientos de Comunicación:
+	\begin{enumerate}
+		\item Implementación del protocolo MQTT para intercambio de datos entre el microcontrolador y los dispositivos conectados. (Prioridad alta)
+		\item Configuración de un servidor MQTT local para la gestión de mensajes y datos en red cerrada. (Prioridad alta)
+		\item Implementación de medidas básicas de seguridad para restringir el acceso no autorizado. (Prioridad alta)
+	\end{enumerate}
+	\item Requerimientos de Software:
+	\begin{enumerate}
+		\item Desarrollo de una aplicación web para gestión y visualización de datos. (Prioridad alta)
+		\item Uso de contenedores Docker para facilitar la portabilidad y mantenimiento del servidor de datos. (Prioridad media)
+		\item Compatibilidad con bases de datos locales para almacenamiento de históricos. (Prioridad alta)
+	\end{enumerate}
+	\item Requerimientos regulatorios y normativos:
+	\begin{enumerate}
+		\item Cumplimiento con las regulaciones locales de telecomunicaciones para transmisión de datos. (Prioridad alta)
+		\item Asegurar que todos los componentes electrónicos cumplan con normas de seguridad eléctrica. (Prioridad alta)
+		\item Cumplimiento con las normativas de protección de datos personales y privacidad en la red local. (Prioridad alta)
+	\end{enumerate}
+	\item Requerimientos opcionales:
+	\begin{enumerate}
+		\item Posibilidad de integración futura con algoritmos de inteligencia artificial para análisis predictivo. (Prioridad baja)
+		\item Compatibilidad para agregar sensores adicionales, como humedad, presión o vibración. (Prioridad baja)
+		\item Integración con servicios en la nube para acceso remoto en futuras etapas. (Prioridad baja)
+	\end{enumerate}
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-\textbf{¡¡¡No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!}
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
