@@ -295,71 +295,108 @@ Para el desarrollo del presente proyecto se supone que:
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: en esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
-
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia.
-
-El formato propuesto es: 
 \begin{enumerate}
-\item ``Como [rol] quiero [tal cosa] para [tal otra cosa]."
-
-\textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
+	\item Como operador del sistema, quiero poder monitorear la temperatura en tiempo real para detectar condiciones adversas y evitar daños en los equipos.
+	
+	\textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
+	
+	\item Como ingeniero electrónico, quiero poder registrar y visualizar el historial de fallas para diagnosticar problemas rápidamente.
+	
+	\textit{Story points}: 10 (complejidad: 4, dificultad: 3, incertidumbre: 3)
+	
+	\item Como operador, quiero poder descargar los registros históricos para análisis detallado fuera de línea.
+	
+	\textit{Story points}: 7 (complejidad: 2, dificultad: 2, incertidumbre: 3)
+	
+	\item Como usuario del sistema, quiero acceder a la interfaz web desde cualquier dispositivo para monitorear y controlar las funciones del sistema de forma conveniente.
+	
+	\textit{Story points}: 9 (complejidad: 3, dificultad: 3, incertidumbre: 3)
+	
 \end{enumerate}
-\end{consigna}
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Los entregables del proyecto son (ejemplo):
+Los entregables del proyecto son:
 
 \begin{itemize}
 	\item Manual de usuario.
 	\item Diagrama de circuitos esquemáticos.
 	\item Código fuente del firmware.
 	\item Diagrama de instalación.
+	\item Aplicación Web Multiplataforma.
+	\item Base de datos local.
 	\item Memoria del trabajo final.
-	\item etc...
 \end{itemize}
-\end{consigna}
+
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
-
 \begin{enumerate}
-\item Grupo de tareas 1 (suma h)
+\item Diseño y Planificación del Sistema (51 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Análisis de requisitos técnicos y funcionales. (10 hs)
+	\item Diseño del shield personalizado. (15 hs) 
+	\item Definición de arquitectura de hardware y software. (12 hs)
+	\item Selección de sensores y componentes adicionales. (6 hs)
+	\item Documentación inicial del proyecto. (8 hs)
 	\end{enumerate}
-\item Grupo de tareas 2 (suma h)
+\item Diseño general del proyecto (35 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Realización de diagrama de bloques. (4 hs)
+	\item Realización de diseño de la arquitectura del sistema. (4 hs)
+	\item Obtener los componentes para el prototipo de pruebas. (12 hs)
+	\item Diagrama de flujo del programa. (15 hs)
 	\end{enumerate}
-\item Grupo de tareas 3 (suma h)
+\item Desarrollo del Hardware (56 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\item Tarea 4 (tantas h)
-	\item Tarea 5 (tantas h)
+	\item Diseño del esquemático del shield personalizado. (12 hs)
+	\item Diseño y fabricación del PCB del shield. (35 hs)
+	\item Montaje y soldadura de componentes. (9 hs)
+	\end{enumerate}
+\item Desarrollo del Firmware (127 hs)
+	\begin{enumerate}
+	\item Programación del microcontrolador TIVA TM4C1294. (25 hs)
+	\item Implementación del protocolo MQTT. (22 hs)
+	\item Desarrollo del código para manejo de sensores. (30 hs)
+	\item Pruebas unitarias y depuración. (40 hs)
+	\end{enumerate}
+\item Desarrollo de Aplicación Web (180 hs)
+	\begin{enumerate}
+	\item Diseño de la interfaz de usuario. (20 hs)
+	\item Programación del backend para gestión de datos. (35 hs)
+	\item Integración con base de datos local. (20 hs)
+	\item Programación del frontend para desarrollo de la aplicación Web. (40 hs)
+	\item Integración entre el backend y frontend. (40 hs)
+	\item Pruebas de funcionalidad y ajustes finales (25 hs)
+	\end{enumerate}
+\item Pruebas y Validación del Sistema (110 hs)
+	\begin{enumerate}
+	\item Pruebas de integración hardware-software. (40 hs)
+	\item Pruebas de rendimiento del sistema en condiciones reales. (40 hs)
+	\item Validación de comunicación y seguridad de datos. (30 hs)
+	\end{enumerate}
+\item Documentación y Entrega Final (20 hs)
+	\begin{enumerate}
+	\item Elaboración del manual de usuario. (6 hs)
+	\item Documentación técnica del shield y firmware. (8 hs)
+	\item Generación del informe final y memoria del proyecto. (6 hs)
+	\end{enumerate}
+\item Documentación y Entrega Final (29 hs)
+	\begin{enumerate}
+	\item Elaboración del manual de usuario. (6 hs)
+	\item Documentación técnica del shield y firmware. (8 hs)
+	\item Elaboración del manual para el desarrollador. (15 hs)
+	\end{enumerate}
+\item Presentación del trabajo (55 hs)
+	\begin{enumerate}
+	\item Elaborar la memoria técnica del trabajo final. (40 hs)
+	\item Elaborar la presentación del trabajo final. (15 hs)
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: tantas.
-
-\textbf{¡Importante!:} la unidad de horas es h y va separada por espacio del número. Es incorrecto escribir ``23hs".
-
-\textbf{Se recomienda que no haya ninguna tarea que lleve más de 40 h.} De ser así se recomienda dividirla en tareas de menor duración.
-
-\end{consigna}
+Cantidad total de horas: 663 hs.
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
@@ -476,18 +513,7 @@ ajustar este valor y, quizás, acortar los nombres de las tareas.
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-Incluir la aclaración de si se emplea como moneda el peso argentino (ARS) o si se usa moneda extranjera (USD, EUR, etc). Si es en moneda extranjera se debe indicar la tasa de conversión respecto a la moneda local en una fecha dada.
-
-\end{consigna}
+La moneda utilizada en el presupuesto es el dólar.
 
 \begin{table}[htpb]
 \centering
@@ -500,24 +526,20 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+Mano de obra  &
+  \multicolumn{1}{c|}{663} & 
+  \multicolumn{1}{c|}{\$ 4.00} &
+  \multicolumn{1}{c|}{\$ 2652} \\ \hline
+Sensor de temperatura &
+  \multicolumn{1}{c|}{3} &
+  \multicolumn{1}{c|}{\$ 5.00} &
+  \multicolumn{1}{c|}{\$ 15.00} \\ \hline
+Otros componentes &
+\multicolumn{1}{c|}{1} &
+   \multicolumn{1}{c|}{\$ 30.00} &
+   \multicolumn{1}{c|}{\$ 30.00} \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{\$ 2697} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -525,23 +547,16 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+30\% de costos dirctos  &
+\multicolumn{1}{c|}{1} &
+\multicolumn{1}{c|}{\$ 809.1} &
+\multicolumn{1}{c|}{\$ 809.1} \\ \hline
+
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+\multicolumn{1}{c|}{\$ 809.1} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
+\multicolumn{1}{c|}{\$ 3506.1} \\ \hline
 \end{tabularx}%
 \end{table}
 
@@ -549,35 +564,50 @@ Descripción &
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
  
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
+Riesgo 1: fallo en el microcontrolador TIVA TM4C1294
 \begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
+	\item Severidad (S): 9 \\ 
+	El sistema depende completamente del microcontrolador para el control de antenas y gestión de datos, por lo que su fallo implica una pérdida crítica de funcionalidad.
+	\item Probabilidad de ocurrencia (O): 3 \\
+	Los microcontroladores TIVA son altamente confiables, pero pueden fallar por sobrecargas, errores de diseño del shield o daños físicos.
 \end{itemize}   
 
-Riesgo 2:
+Riesgo 2: interferencia en la comunicación MQTT
 \begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
-\end{itemize}
+	\item Severidad (S): 8 \\ 
+	Una falla en la comunicación puede dejar el sistema sin datos críticos y dificultar el monitoreo remoto.
+	\item Probabilidad de ocurrencia (O): 3 \\
+	Las redes locales pueden experimentar interferencias o congestión, especialmente en ambientes con alta demanda de ancho de banda.
+\end{itemize}   
 
-Riesgo 3:
+Riesgo 3: daño físico al shield personalizado
 \begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
-\end{itemize}
+	\item Severidad (S): 7 \\ 
+	Un daño en el shield puede comprometer la protección eléctrica del sistema y generar fallos críticos.
+	\item Probabilidad de ocurrencia (O): 4 \\
+	El proceso de soldadura y montaje conlleva riesgos si no se toman las precauciones adecuadas.
+\end{itemize}   
+
+Riesgo 4: fallo en los sensores de temperatura
+\begin{itemize}
+	\item Severidad (S): 6 \\ 
+	Los datos de temperatura son importantes para evitar sobrecalentamientos y daños en los equipos.
+	\item Probabilidad de ocurrencia (O): 6 \\
+	Los sensores son componentes relativamente sensibles que pueden dañarse por picos de voltaje o condiciones ambientales extremas.
+\end{itemize}   
+
+Riesgo 5: problemas de seguridad en la red local
+\begin{itemize}
+	\item Severidad (S): 10 \\ 
+	Una brecha de seguridad puede exponer información sensible y comprometer la estabilidad del sistema.
+	\item Probabilidad de ocurrencia (O): 5 \\
+	Aunque se planea implementar medidas básicas de seguridad, siempre existe el riesgo de ataques externos o internos.
+\end{itemize}   
 
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+
+b) Tabla de gestión de riesgos: (El RPN se calcula como RPN=SxO)
 
 \begin{table}[htpb]
 \centering
@@ -585,36 +615,29 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+     1 & 9 & 3 &  27 &    &    &      \\ \hline
+     2 & 8 & 3 &  24 &    &    &      \\ \hline
+     3 & 7 & 4 &  28 &    &    &      \\ \hline
+     4 & 6 & 6 &  36 &    &    &      \\ \hline
+     5 & 10 & 5 & 50 &    &    &      \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 30
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
+Riesgo 4: Implementar redundancia de sensores en puntos críticos para validar las mediciones.
   \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+	\item Severidad (S): 6 \\ 
+	Los datos de temperatura son importantes para evitar sobrecalentamientos y daños en los equipos.
+	\item Probabilidad de ocurrencia (O): 2 \\
+	La probabilidad de ocurrencia es baja, porque 
 	\end{itemize}
-
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-
-\end{consigna}
 
 
 \section{14. Gestión de la calidad}
