@@ -136,9 +136,7 @@ El sistema propuesto incluye los siguientes componentes:
 	\item Seguridad en redes locales para garantizar acceso controlado.	
 \end{itemize}
 
-El diagrama en bloques del sistema se presenta en la Figura 1, donde se destacan los módulos de adquisición de datos, procesamiento, comunicación y visualización.
-
-Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase como la siguiente: ``En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''.  La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+El diagrama en bloques del sistema se presenta en la Figura \ref{fig:diagBloques}, donde se destacan el módulo ABS,procesamiento de datos y comunicación. y visualización.
 
 \begin{figure}[htpb]
 	\centering 
@@ -148,11 +146,6 @@ Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase 
 \end{figure}
 
 \vspace{25px}
-
-
-El tamaño del texto en TODAS las figuras debe ser adecuado \textbf{para que NO pase lo que ocurre en la figura \ref{fig:diagBloques}}, donde el lector debe esforzarse para poder leer el texto. 
-
-Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama. Se recomienda evitar colores primarios (como rojo, verde o cyan) y usar la gama de colores pastel.
 
 
 \section{2. Identificación y análisis de los interesados}
@@ -399,7 +392,8 @@ Los entregables del proyecto son:
 Cantidad total de horas: 663 hs.
 %\vspace{60px}
 
-
+%\vspace{230px}
+\newpage
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
@@ -409,94 +403,29 @@ Cantidad total de horas: 663 hs.
 	\caption{Diagrama en Activity on Node.}
 	\label{fig:AoN}
 \end{figure}
-\vspace{60px}
+\newpage
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. 
-En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-Las fechas pueden ser calculadas utilizando alguna de las herramientas antes citadas. Sin embargo, el siguiente ejemplo
-fue elaborado utilizando 
-\href{https://docs.google.com/spreadsheets/d/1fBz8NhSpc4tkkhz3KjJCbh1nR_ltDkfEcZi4tZXduqs}{esta hoja de cálculo}.
-
-Es importante destacar que el ancho del diagrama estará dado por la longitud del texto utilizado para las tareas 
-(Ejemplo: tarea 1, tarea 2, etcétera) y el valor \textit{x unit}. Para mejorar la apariencia del diagrama, es necesario
-ajustar este valor y, quizás, acortar los nombres de las tareas.
+Para el diagrama de Gantt se consideró una dedicación parcial promedio de 3 hs durante todos los días hábiles.
 
 \begin{figure}[htpb]
-  \begin{center}
-    \begin{ganttchart}[
-      time slot unit=day,
-      time slot format=isodate,
-      x unit=0.038cm,
-      y unit title=0.7cm,
-      y unit chart=0.6cm,
-      milestone/.append style={xscale=4}
-      ]{2021-03-05}{2021-12-16}
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{year} \\
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{month} \\
-      \ganttgroup{Duración Total}{2021-03-05}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%Organización
-      \ganttgroup{Organización}{2021-03-05}{2021-04-16} \\
-      \ganttbar{Planificación del proyecto}{2021-03-05}{2021-04-15} \\
-      %%%%%%%%%%%%%%%%%Ejecución
-      \ganttgroup{Ejecución}{2021-04-16}{2021-10-21} \\
-      \ganttbar{Tarea 1}{2021-04-16}{2021-04-29} \\
-      \ganttbar{Tarea 2}{2021-04-30}{2021-05-13} \\
-      \ganttbar{Tarea 3}{2021-05-14}{2021-05-27} \\
-      \ganttbar{Tarea 4}{2021-05-28}{2021-07-12} \\
-      \ganttbar{Tarea 5}{2021-07-13}{2021-08-09} \\
-      \ganttbar{Tarea 6}{2021-08-10}{2021-09-23} \\
-      \ganttbar{Tarea 7}{2021-09-24}{2021-09-30} \\
-      \ganttbar{Tarea 8}{2021-10-01}{2021-10-14} \\
-      \ganttbar{Tarea 9}{2021-10-15}{2021-10-21} \\
-      % %%%%%%%%%%%%%%%%%Finalización
-      \ganttgroup{Finalización}{2021-10-22}{2021-12-16} \\
-      \ganttbar{Memoria v1}{2021-10-22}{2021-11-04} \\
-      \ganttbar{Memoria v2}{2021-11-05}{2021-11-18} \\
-      \ganttbar{Memoria final}{2021-11-19}{2021-12-02} \\
-      % La fecha del siguiente milestone es la fecha en que terminamos la memoria
-      \ganttmilestone{Enviar memoria al director}{2021-12-02} \\
-      \ganttbar{Elaborar la presentación}{2021-12-03}{2021-12-16} \\
-      \ganttmilestone{Ensayo de la presentación}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \end{ganttchart}
-  \end{center}
-  \caption{Diagrama de gantt de ejemplo}
-  \label{fig:gantt}
+	\centering 
+	\includegraphics[width=0.82\textwidth]{./Figuras/gantt_1.png}
+	\caption{Diagrama en gantt desarrollado en Gantt Project}
+	\label{fig:Gannt1}
 \end{figure}
 
 
 \begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt (apaisado).} %Modificar este título acorde.
-\label{fig:diagGantt}
+\includegraphics[height=1\textheight]{./Figuras/gantt2.png}
+\caption{Diagrama en gantt desarrollado en Gantt Project} 
+\label{fig:Gantt2}
 \end{figure}
 
 \end{landscape}
-
-\end{consigna}
 
 
 \section{12. Presupuesto detallado del proyecto}
@@ -607,8 +536,8 @@ Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
      1 & 9 & 3 &  27 &    &    &      \\ \hline
      2 & 8 & 3 &  24 &    &    &      \\ \hline
      3 & 7 & 4 &  28 &    &    &      \\ \hline
-     4 & 6 & 6 &  36 &    &    &      \\ \hline
-     5 & 10 & 5 & 50 &    &    &      \\ \hline
+     4 & 6 & 6 &  36 & 5  & 2  & 10   \\ \hline
+     5 & 10 & 5 & 50 & 5  & 5  & 25   \\ \hline
 \end{tabularx}%
 \end{table}
 
@@ -620,54 +549,142 @@ Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplic
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 4: Implementar redundancia de sensores en puntos críticos para validar las mediciones.
+Riesgo 4: fallo en los sensores de temperatura
   \begin{itemize}
-	\item Severidad (S): 6 \\ 
-	Los datos de temperatura son importantes para evitar sobrecalentamientos y daños en los equipos.
+  	\item Plan de mitigación: Utilizar sensores de mayor calidad con certificación industrial para mayor precisión y durabilidad.
+	\item Severidad (S): 5 \\ 
+	La severidad es moderada, si el sistema utiliza unos sensores certificados.
 	\item Probabilidad de ocurrencia (O): 2 \\
-	La probabilidad de ocurrencia es baja, porque 
+	La probabilidad de ocurrencia es baja, porque se usará sensores que se cuentan en el inventario.
 	\end{itemize}
-
+\newpage
+Riesgo 5: problemas de seguridad en la red local
+\begin{itemize}
+	\item Plan de mitigación: Implementar cifrado de datos en tránsito usando TLS/SSL en las comunicaciones MQTT.
+	\item Severidad (S): 5 \\ 
+	La severidad es moderada, si el sistema logra cifrar la data adquirida.
+	\item Probabilidad de ocurrencia (O): 5 \\
+	Es poco probable, pero se utilizará servicios ya utilizados en el radio observatorio.
+\end{itemize}   
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Elija al menos diez requerimientos que a su criterio sean los más importantes/críticos/que aportan más valor y para cada uno de ellos indique las acciones de verificación y validación que permitan asegurar su cumplimiento.
-
 \begin{itemize} 
-\item Req \#1: copiar acá el requerimiento con su correspondiente número.
+
+\item Req 1.1: El sistema debe permitir el monitoreo continuo de la temperatura en tiempo real.
 
 \begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar.
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar. 
+	\item Verificación: Se conectará el sensor de temperatura al microcontrolador y se registrará la lectura en intervalos de 1 segundo. Se utilizará un sensor patrón para comparar los valores medidos. Se revisará el código para asegurar lectura continua y estabilidad.
+	\item 	Validación: Se presentará al cliente la interfaz web mostrando la temperatura en tiempo real, utilizando una pistola termómetro para comparar el valor en vivo con una referencia externa.
+\end{itemize}
+
+\item Req 1.2: El sistema debe registrar y almacenar eventos críticos, fallas y cambios de apuntamiento en una base de datos local.
+
+\begin{itemize}
+	\item Verificación: Se forzarán eventos simulados (fallas de conexión, cambio de apuntamiento) y se verificará que los datos se registren correctamente en la base de datos.
+
+	\item Validación: El cliente accederá a la interfaz y consultará eventos registrados; validará que los eventos coincidan con las acciones que se ejecutaron durante la prueba.
+
+\end{itemize}
+
+\item Req 1.3: El sistema debe permitir el control remoto del apuntamiento de antenas a través de una interfaz web multiplataforma.
+
+\begin{itemize}
+	\item Verificación: Se probará el control remoto desde distintos dispositivos en la red local. Se inspeccionará el código del backend y las señales eléctricas enviadas a los relés de apuntamiento.
+
+	\item Validación: El cliente controlará el sistema desde una PC y un smartphone y observará que el cambio de apuntamiento se refleja correctamente en el hardware.
+\end{itemize}
+
+\item Req 1.4: El sistema debe enviar notificaciones de fallas a dispositivos conectados en la red local.
+\begin{itemize}
+	\item Verificación: Se simularán condiciones de falla (desconexión de sensores, sobrecarga) y se verificará que los mensajes MQTT lleguen a los suscriptores configurados.
+
+	\item Validación: El cliente recibirá notificaciones en tiempo real en su panel de usuario y confirmará que reflejan el estado del sistema.
+\end{itemize}
+
+\item Req 1.5: La interfaz web debe permitir el acceso desde computadoras, tablets y smartphones.
+\begin{itemize}
+	\item Verificación: Se probará la interfaz en múltiples dispositivos y navegadores (Chrome, Firefox, Safari) y se verificará la adaptación responsiva del diseño.
+	
+	\item Validación: El cliente probará la interfaz desde sus propios dispositivos para confirmar compatibilidad y usabilidad.
+\end{itemize}
+
+\item Req 1.6: El sistema debe permitir la descarga de registros históricos en formato CSV.
+\begin{itemize}
+	\item Verificación: Se generará un archivo CSV desde la interfaz, se verificará que contiene los campos esperados y se abrirá en Excel para comprobar estructura.
+
+	\item Validación: El cliente descargará el archivo y lo usará para realizar un análisis básico de fallas y eventos. Confirmará que los datos están completos y claros.
+\end{itemize}
+\item Req 2.2: El shield personalizado debe proteger y facilitar la conexión de sensores.
+\begin{itemize}
+	\item Verificación: Se realizará una revisión de diseño del esquemático y se probarán las entradas con distintas tensiones para confirmar aislamiento.
+
+	\item Validación: Se mostrará al cliente el funcionamiento estable del sistema durante las pruebas de campo, confirmando que los sensores funcionan correctamente sin daño al microcontrolador.
+\end{itemize}
+
+\item Req 3.1: Implementación del protocolo MQTT para intercambio de datos entre el microcontrolador y los dispositivos conectados.
+
+\begin{itemize}
+	\item Verificación: Se revisará el código fuente para confirmar el uso del cliente MQTT, y se capturarán paquetes con Wireshark para comprobar el protocolo.
+	
+	\item Validación: El cliente recibirá datos vía MQTT en una aplicación externa compatible (ej. MQTT Explorer), validando que la comunicación es funcional.
+\end{itemize}
+
+\item Req 4.1: Desarrollo de una aplicación web para gestión y visualización de datos.
+\begin{itemize}
+	\item Verificación: Se revisará el código fuente de la aplicación web (HTML, CSS, JavaScript, backend) para comprobar que incluye todos los módulos requeridos.
+	
+	\item Validación: El cliente utilizará la aplicación web en diferentes dispositivos (PC, tablet, smartphone) y verificará que puede acceder a las funcionalidades críticas del sistema.
+	\end{itemize}
+	
+\item Req 4.2: Uso de contenedores Docker para facilitar la portabilidad y mantenimiento del servidor de datos.
+\begin{itemize}
+	\item Verificación:Se examinará el archivo Dockerfile y los docker-compose.yml utilizados, asegurando que el sistema se construya correctamente en un entorno limpio. 
+
+	\item Validación: Se considerará validado si el cliente puede ejecutar el sistema sin complicaciones, accede a la interfaz y confirma que todos los servicios están operativos tras la instalación.
 \end{itemize}
 
 \end{itemize}
-
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  
-
-Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  
-
-En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
-
-\end{consigna}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
+Se contemplan las siguiente actividades una vez finalizado al cierre del proyecto.
 
 \begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, los problemas que surgieron y cómo se solucionaron:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:\\
-	  - Indicar esto y quién financiará los gastos correspondientes.
+	\item Análisis de seguimiento del Plan de Proyecto original
+	\begin{itemize}
+		\item Responsable: William’s Limonchi
+		\item Actividad: 
+		\begin{itemize}
+			\item Se comparará el cronograma real del proyecto con el cronograma inicial planificado, utilizando la documentación de seguimiento y los registros de avance por tareas.
+			\item Se verificará el cumplimiento de los requerimientos definidos mediante una lista de cotejo cruzada con los entregables.
+		\end{itemize}
+	\end{itemize}
+	\item Identificación de procedimientos útiles, problemas que surgieron y cómo se solucionaron:
+	\begin{itemize}
+		\item Responsable: William’s Limonchi
+		\item Actividad: 
+		\begin{itemize}
+			\item Se analizará el uso de las diferentes herramientas utilizadas para evaluar el
+			impacto en el proyecto.
+			\item Se presentarán los inconvenientes detectados con la solución respectiva, a fin de
+			evitar que vuelvan a ocurrir.
+		\end{itemize}
+	\end{itemize}
+	\item Indicar quién organizará el acto de agradecimiento a todos los interesados.
+	\begin{itemize}
+		\item Responsable: William’s Limonchi
+		\item Actividad: 
+		\begin{itemize}
+			\item Al finalizar el proyecto y presentar la defensa pública, se procederá a agradecer
+			a todas las personas que han participado en el desarrollo del proyecto, jurados,
+			compañeros, docentes y autoridades de la carrera de especialización.
+		\end{itemize}
+	\end{itemize}
 \end{itemize}
 
-\end{consigna}
+
 
 \end{document}
