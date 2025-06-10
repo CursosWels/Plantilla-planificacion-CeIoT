@@ -106,7 +106,7 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-El Radio Observatorio de Jicamarca es una instalación de investigación científica gestionada por el Instituto Geofísico del Perú (IGP), reconocida mundialmente por sus estudios sobre la ionósfera. El sistema cambio de apunte atuomático (ABS) fue diseñado originalmente para facilitar el cambio de apuntamiento de las antenas de manera manual o remota a través de Ethernet, asegurando la precisión requerida para estos experimentos. Sin embargo, a medida que los sistemas de monitoreo y gestión se han vuelto más sofisticados, ha surgido la necesidad de actualizar el sistema para mejorar la trazabilidad, mantenimiento y diagnóstico de fallos.
+El Radio Observatorio de Jicamarca es una instalación de investigación científica gestionada por el Instituto Geofísico del Perú (IGP), reconocida mundialmente por sus estudios sobre la ionósfera. El sistema de cambio de apunte atuomático (ABS) fue diseñado originalmente para facilitar el cambio de apuntamiento de las antenas de manera manual o remota a través de Ethernet, asegurando la precisión requerida para estos experimentos. Sin embargo, a medida que los sistemas de monitoreo y gestión se han vuelto más sofisticados, ha surgido la necesidad de actualizar el sistema para mejorar la trazabilidad, mantenimiento y diagnóstico de fallos.
 
 El proyecto consiste en la mejora del sistema ABS del Radio Observatorio de Jicamarca, un sistema crítico para el control de antenas utilizadas en experimentos avanzados sobre la ionósfera terrestre. Esta mejora tiene como objetivo modernizar el sistema integrando tecnologías de Internet de las Cosas (IoT) para permitir el monitoreo, control y gestión remota de las operaciones, ampliando sus capacidades actuales y optimizando la eficiencia en el manejo de datos.
 
@@ -116,14 +116,14 @@ Actualmente, el sistema permite el control remoto del apuntamiento de antenas, p
 	\item Monitoreo de variables ambientales como la temperatura para detectar condiciones adversas.
 	\item Registro histórico de fallas y mantenimiento, mejorando la trazabilidad y análisis de fallos.
 	\item Gestión de datos en tiempo real mediante una interfaz web multiplataforma.
-	\item Desarrollo de shield personalizada para el monitoreo de temperatura.
+	\item Desarrollar una placa shield personalizada para el monitoreo de temperatura.
 \end{itemize}
 
 El sistema propuesto incluye los siguientes componentes:
 \begin{itemize}
     \item Microcontrolador TIVA TM4C1294 para control central.
 
-	\item Shield personalizado para protección y expansión modular de sensores adicionales.
+	\item Una placa shield personalizada para protección y expansión modular de sensores adicionales.
 
 	\item Sensores ambientales, inicialmente de temperatura, con posibilidad de expansión.
 
@@ -136,7 +136,7 @@ El sistema propuesto incluye los siguientes componentes:
 	\item Seguridad en redes locales para garantizar acceso controlado.	
 \end{itemize}
 
-El diagrama en bloques del sistema se presenta en la Figura \ref{fig:diagBloques}, donde se destacan el módulo ABS,procesamiento de datos y comunicación. y visualización.
+El diagrama en bloques del sistema se presenta en la Figura \ref{fig:diagBloques}, donde se destacan el módulo ABS,procesamiento de datos, la comunicación y visualización.
 
 \begin{figure}[htpb]
 	\centering 
@@ -210,7 +210,7 @@ El presente proyecto no incluye:
 
 	\item La integración con servicios en la nube para almacenamiento remoto o procesamiento avanzado de datos.
 
-	\item El rediseño físico o estructural del sistema de antenas o sus componentes mecánicos.
+	\item El rediseño físico o estructural de sus componentes mecánicos.
 
 	\item El suministro de infraestructura de red, como switches, routers o fibra óptica.
 \end{itemize}
@@ -256,7 +256,7 @@ Para el desarrollo del presente proyecto se supone que:
 	\begin{enumerate}
 		\item Uso de un microcontrolador TIVA TM4C1294 como núcleo del sistema. (Prioridad alta)
 		\item Desarrollo de un shield electrónico personalizado para protección y expansión de sensores. (Prioridad alta)
-		\item Inclusión de al menos un sensor de temperatura compatible con el microcontrolador. (Prioridad alta)
+		\item Incluir un sensor de temperatura compatible con el microcontrolador. (Prioridad alta)
 		\item  Fuente de alimentación y conversión de medios (fibra a Ethernet) para garantizar conectividad estable. (Prioridad alta)
 	\end{enumerate}
 	\item Requerimientos de Comunicación:
@@ -370,26 +370,20 @@ Los entregables del proyecto son:
 	\item Pruebas de rendimiento del sistema en condiciones reales. (40 hs)
 	\item Validación de comunicación y seguridad de datos. (30 hs)
 	\end{enumerate}
-\item Documentación y Entrega Final (20 hs)
-	\begin{enumerate}
-	\item Elaboración del manual de usuario. (6 hs)
-	\item Documentación técnica del shield y firmware. (8 hs)
-	\item Generación del informe final y memoria del proyecto. (6 hs)
-	\end{enumerate}
-\item Documentación y Entrega Final (29 hs)
+\item Manuales técnicos (29 hs)
 	\begin{enumerate}
 	\item Elaboración del manual de usuario. (6 hs)
 	\item Documentación técnica del shield y firmware. (8 hs)
 	\item Elaboración del manual para el desarrollador. (15 hs)
 	\end{enumerate}
-\item Presentación del trabajo (55 hs)
+\item Presentación del trabajo (70 hs)
 	\begin{enumerate}
 	\item Elaborar la memoria técnica del trabajo final. (40 hs)
-	\item Elaborar la presentación del trabajo final. (15 hs)
+	\item Elaborar la presentación del trabajo final. (30 hs)
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: 663 hs.
+Cantidad total de horas: 658 hs.
 %\vspace{60px}
 
 %\vspace{230px}
@@ -465,7 +459,7 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-30\% de costos dirctos  &
+30\% de costos directos  &
 \multicolumn{1}{c|}{1} &
 \multicolumn{1}{c|}{\$ 809.1} &
 \multicolumn{1}{c|}{\$ 809.1} \\ \hline
@@ -555,7 +549,7 @@ Riesgo 4: fallo en los sensores de temperatura
 	\item Severidad (S): 5 \\ 
 	La severidad es moderada, si el sistema utiliza unos sensores certificados.
 	\item Probabilidad de ocurrencia (O): 2 \\
-	La probabilidad de ocurrencia es baja, porque se usará sensores que se cuentan en el inventario.
+	La probabilidad de ocurrencia es baja, porque se usarán sensores que están en el inventario.
 	\end{itemize}
 \newpage
 Riesgo 5: problemas de seguridad en la red local
@@ -575,74 +569,74 @@ Riesgo 5: problemas de seguridad en la red local
 \item Req 1.1: El sistema debe permitir el monitoreo continuo de la temperatura en tiempo real.
 
 \begin{itemize}
-	\item Verificación: Se conectará el sensor de temperatura al microcontrolador y se registrará la lectura en intervalos de 1 segundo. Se utilizará un sensor patrón para comparar los valores medidos. Se revisará el código para asegurar lectura continua y estabilidad.
-	\item 	Validación: Se presentará al cliente la interfaz web mostrando la temperatura en tiempo real, utilizando una pistola termómetro para comparar el valor en vivo con una referencia externa.
+	\item Verificación: \\ Se conectará el sensor de temperatura al microcontrolador y se registrará la lectura en intervalos de 1 segundo. Se utilizará un sensor patrón para comparar los valores medidos. Se revisará el código para asegurar lectura continua y estabilidad.
+	\item 	Validación: \\ Se presentará al cliente la interfaz web mostrando la temperatura en tiempo real, utilizando una pistola termómetro para comparar el valor en vivo con una referencia externa.
 \end{itemize}
 
 \item Req 1.2: El sistema debe registrar y almacenar eventos críticos, fallas y cambios de apuntamiento en una base de datos local.
 
 \begin{itemize}
-	\item Verificación: Se forzarán eventos simulados (fallas de conexión, cambio de apuntamiento) y se verificará que los datos se registren correctamente en la base de datos.
+	\item Verificación: \\ Se forzarán eventos simulados (fallas de conexión, cambio de apuntamiento) y se verificará que los datos se registren correctamente en la base de datos.
 
-	\item Validación: El cliente accederá a la interfaz y consultará eventos registrados; validará que los eventos coincidan con las acciones que se ejecutaron durante la prueba.
+	\item Validación: \\ El cliente accederá a la interfaz y consultará eventos registrados; validará que los eventos coincidan con las acciones que se ejecutaron durante la prueba.
 
 \end{itemize}
 
 \item Req 1.3: El sistema debe permitir el control remoto del apuntamiento de antenas a través de una interfaz web multiplataforma.
 
 \begin{itemize}
-	\item Verificación: Se probará el control remoto desde distintos dispositivos en la red local. Se inspeccionará el código del backend y las señales eléctricas enviadas a los relés de apuntamiento.
+	\item Verificación: \\ Se probará el control remoto desde distintos dispositivos en la red local. Se inspeccionará el código del backend y las señales eléctricas enviadas a los relés de apuntamiento.
 
-	\item Validación: El cliente controlará el sistema desde una PC y un smartphone y observará que el cambio de apuntamiento se refleja correctamente en el hardware.
+	\item Validación: \\ El cliente controlará el sistema desde una PC y un smartphone y observará que el cambio de apuntamiento se refleja correctamente en el hardware.
 \end{itemize}
 
 \item Req 1.4: El sistema debe enviar notificaciones de fallas a dispositivos conectados en la red local.
 \begin{itemize}
-	\item Verificación: Se simularán condiciones de falla (desconexión de sensores, sobrecarga) y se verificará que los mensajes MQTT lleguen a los suscriptores configurados.
+	\item Verificación: \\ Se simularán condiciones de falla (desconexión de sensores, sobrecarga) y se verificará que los mensajes MQTT lleguen a los suscriptores configurados.
 
-	\item Validación: El cliente recibirá notificaciones en tiempo real en su panel de usuario y confirmará que reflejan el estado del sistema.
+	\item Validación: \\ El cliente recibirá notificaciones en tiempo real en su panel de usuario y confirmará que reflejan el estado del sistema.
 \end{itemize}
 
 \item Req 1.5: La interfaz web debe permitir el acceso desde computadoras, tablets y smartphones.
 \begin{itemize}
-	\item Verificación: Se probará la interfaz en múltiples dispositivos y navegadores (Chrome, Firefox, Safari) y se verificará la adaptación responsiva del diseño.
+	\item Verificación: \\ Se probará la interfaz en múltiples dispositivos y navegadores (Chrome, Firefox, Safari) y se verificará la adaptación responsiva del diseño.
 	
-	\item Validación: El cliente probará la interfaz desde sus propios dispositivos para confirmar compatibilidad y usabilidad.
+	\item Validación: \\ El cliente probará la interfaz desde sus propios dispositivos para confirmar compatibilidad y usabilidad.
 \end{itemize}
 
 \item Req 1.6: El sistema debe permitir la descarga de registros históricos en formato CSV.
 \begin{itemize}
-	\item Verificación: Se generará un archivo CSV desde la interfaz, se verificará que contiene los campos esperados y se abrirá en Excel para comprobar estructura.
+	\item Verificación: \\ Se generará un archivo CSV desde la interfaz, se verificará que contiene los campos esperados y se abrirá en Excel para comprobar estructura.
 
-	\item Validación: El cliente descargará el archivo y lo usará para realizar un análisis básico de fallas y eventos. Confirmará que los datos están completos y claros.
+	\item Validación: \\ El cliente descargará el archivo y lo usará para realizar un análisis básico de fallas y eventos. Confirmará que los datos están completos y claros.
 \end{itemize}
 \item Req 2.2: El shield personalizado debe proteger y facilitar la conexión de sensores.
 \begin{itemize}
-	\item Verificación: Se realizará una revisión de diseño del esquemático y se probarán las entradas con distintas tensiones para confirmar aislamiento.
+	\item Verificación: \\ Se realizará una revisión de diseño del esquemático y se probarán las entradas con distintas tensiones para confirmar aislamiento.
 
-	\item Validación: Se mostrará al cliente el funcionamiento estable del sistema durante las pruebas de campo, confirmando que los sensores funcionan correctamente sin daño al microcontrolador.
+	\item Validación: \\ Se mostrará al cliente el funcionamiento estable del sistema durante las pruebas de campo, confirmando que los sensores funcionan correctamente sin daño al microcontrolador.
 \end{itemize}
 
 \item Req 3.1: Implementación del protocolo MQTT para intercambio de datos entre el microcontrolador y los dispositivos conectados.
 
 \begin{itemize}
-	\item Verificación: Se revisará el código fuente para confirmar el uso del cliente MQTT, y se capturarán paquetes con Wireshark para comprobar el protocolo.
+	\item Verificación: \\ Se revisará el código fuente para confirmar el uso del cliente MQTT, y se capturarán paquetes con Wireshark para comprobar el protocolo.
 	
-	\item Validación: El cliente recibirá datos vía MQTT en una aplicación externa compatible (ej. MQTT Explorer), validando que la comunicación es funcional.
+	\item Validación: \\ El cliente recibirá datos vía MQTT en una aplicación externa compatible (ej. MQTT Explorer), validando que la comunicación es funcional.
 \end{itemize}
 
 \item Req 4.1: Desarrollo de una aplicación web para gestión y visualización de datos.
 \begin{itemize}
-	\item Verificación: Se revisará el código fuente de la aplicación web (HTML, CSS, JavaScript, backend) para comprobar que incluye todos los módulos requeridos.
+	\item Verificación: \\ Se revisará el código fuente de la aplicación web (HTML, CSS, JavaScript, backend) para comprobar que incluye todos los módulos requeridos.
 	
-	\item Validación: El cliente utilizará la aplicación web en diferentes dispositivos (PC, tablet, smartphone) y verificará que puede acceder a las funcionalidades críticas del sistema.
+	\item Validación: \\ El cliente utilizará la aplicación web en diferentes dispositivos (PC, tablet, smartphone) y verificará que puede acceder a las funcionalidades críticas del sistema.
 	\end{itemize}
 	
 \item Req 4.2: Uso de contenedores Docker para facilitar la portabilidad y mantenimiento del servidor de datos.
 \begin{itemize}
-	\item Verificación:Se examinará el archivo Dockerfile y los docker-compose.yml utilizados, asegurando que el sistema se construya correctamente en un entorno limpio. 
+	\item Verificación: \\ Se examinará el archivo Dockerfile y los docker-compose.yml utilizados, asegurando que el sistema se construya correctamente en un entorno limpio. 
 
-	\item Validación: Se considerará validado si el cliente puede ejecutar el sistema sin complicaciones, accede a la interfaz y confirma que todos los servicios están operativos tras la instalación.
+	\item Validación: \\ Se considerará validado si el cliente puede ejecutar el sistema sin complicaciones, accede a la interfaz y confirma que todos los servicios están operativos tras la instalación.
 \end{itemize}
 
 \end{itemize}
@@ -650,7 +644,7 @@ Riesgo 5: problemas de seguridad en la red local
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-Se contemplan las siguiente actividades una vez finalizado al cierre del proyecto.
+Se contemplan las siguientes actividades una vez finalizado al cierre del proyecto.
 
 \begin{itemize}
 	\item Análisis de seguimiento del Plan de Proyecto original
