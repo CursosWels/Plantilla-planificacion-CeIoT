@@ -5,7 +5,7 @@
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Mejora del Sistema de Apunte Automático mediante la integración de IoT para monitoreo, control y gestión remota} 
+\titulo{Mejora del sistema de apunte automático mediante la integración de IoT para monitoreo, control y gestión remota} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 %\posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -28,9 +28,9 @@
 \cliente{Dr. Danny Scipión}
 \empresaCliente{Radio Observatorio de Jicamarca - IGP}
  
-\fechaINICIO{29 de abril de 2025}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{17 de junio de 2025} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{30 de octubre de 2025}	%Fecha de defensa pública del trabajo final
+\fechaINICIO{26 de agosto de 2025}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{14 de octubre de 2025} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{30 de mayo de 2026}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -59,9 +59,9 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-1      & Primera versión de la planificación del trabajo final & 10 de junio de 2025\\  \hline
-2      & Se realizaron correcciones gramaticales de la planificación del trabajo & 21 de agosto de 2025 \\ \hline
-%3      & Se completa hasta el punto 12 inclusive                & {día} de {mes} de 202X \\ \hline
+1      & Primera versión de la planificación del trabajo final &\fechaInicioName\\  \hline
+2      & Se realizaron correcciones gramaticales de la planificación del trabajo & 09 de septiembre de 2025 \\ \hline
+3      & Se completa hasta el punto 12 inclusive                & {día} de {mes} de 202X \\ \hline
 %4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
@@ -82,7 +82,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en implementar una mejora en el sistema actual que posee en el Radio Observatorio de Jicamarca. El trabajo tendrá un presupuesto preliminar estimado de 658 horas y un costo estimado de \$300 doláres americanos, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación en el mes de octubre.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en implementar una mejora en el sistema actual que posee en el Radio Observatorio de Jicamarca. El trabajo tendrá un presupuesto preliminar estimado de 658 horas y un costo estimado de \$3506,1 doláres americanos, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación en el mes de mayo del 2026.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -105,13 +105,13 @@ Se adjunta a esta acta la planificación inicial.
 
 El Radio Observatorio de Jicamarca es una instalación de investigación científica gestionada por el Instituto Geofísico del Perú (IGP), reconocida mundialmente por sus estudios sobre la ionósfera. El sistema de cambio de apunte atuomático (ABS) fue diseñado originalmente para facilitar el cambio de apuntamiento de las antenas de manera manual o remota a través de Ethernet, lo que asegura la precisión requerida para estos experimentos. Sin embargo, a medida que los sistemas de monitoreo y gestión se han vuelto más sofisticados, ha surgido la necesidad de actualizar el sistema para mejorar la trazabilidad, mantenimiento y diagnóstico de fallos.
 
-El proyecto consiste en la mejora del sistema ABS del Radio Observatorio de Jicamarca, un sistema crítico para el control de antenas utilizadas en experimentos avanzados sobre la ionósfera terrestre. Esta mejora tiene como objetivo modernizar el sistema integrando tecnologías de Internet de las Cosas (IoT) para permitir el monitoreo, control y gestión remota de las operaciones, lo que aumenta sus capacidades actuales y optimizando la eficiencia en el manejo de datos.
+El proyecto consiste en la mejora del sistema ABS del Radio Observatorio de Jicamarca, un sistema crítico para el control de antenas utilizadas en experimentos avanzados sobre la ionósfera terrestre. Esta mejora tiene como objetivo modernizar el sistema mediante la integración de tecnologías de Internet de las Cosas (IoT) para permitir el monitoreo, control y gestión remota de las operaciones, lo que aumenta sus capacidades actuales y optimiza la eficiencia en el manejo de datos.
 
 Actualmente, el sistema permite el control remoto del apuntamiento de antenas, pero carece de capacidades avanzadas para el registro de datos, diagnóstico proactivo y monitoreo ambiental, lo que puede comprometer la confiabilidad y disponibilidad del sistema. La propuesta es implementar una solución IoT que no solo mantenga las funciones básicas del sistema, sino que también integre:
 
 \begin{itemize}
 	\item Monitoreo de variables ambientales como la temperatura para detectar condiciones adversas.
-	\item Registro histórico de fallas y mantenimiento, mejorando la trazabilidad y análisis de fallos.
+	\item Registro histórico de fallas y mantenimiento, lo que mejora la trazabilidad y análisis de fallos.
 	\item Gestión de datos en tiempo real mediante una interfaz web multiplataforma.
 	\item Desarrollar una placa shield personalizada para el monitoreo de temperatura.
 \end{itemize}
@@ -124,7 +124,7 @@ El sistema propuesto incluye los siguientes componentes:
 
 	\item Sensores ambientales, inicialmente de temperatura, con posibilidad de expansión.
 
-	\item Servidor MQTT para comunicación eficiente y escalable.
+	\item Servidor MQTT para una comunicación eficiente y escalable.
 
 	\item Base de datos local para almacenar y gestionar el historial de fallas y eventos.
 
@@ -133,6 +133,7 @@ El sistema propuesto incluye los siguientes componentes:
 	\item Seguridad en redes locales para garantizar acceso controlado.	
 \end{itemize}
 
+\newpage
 El diagrama en bloques del sistema se presenta en la Figura \ref{fig:diagBloques}, donde se destacan el módulo ABS, procesamiento de datos, la comunicación y visualización.
 
 \begin{figure}[htpb]
@@ -142,14 +143,12 @@ El diagrama en bloques del sistema se presenta en la Figura \ref{fig:diagBloques
 	\label{fig:diagBloques}
 \end{figure}
 
-\vspace{25px}
-
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
 
 \begin{itemize}
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
+	\item Auspiciante: es riguroso y exigente con la rendición de gastos.
 	\item Cliente: el Radio Observatorio de Jicamarca, interesado en el desarrollo del proyecto para implementarlo en las mejoras de los futuros experimentos a realizar.
 \end{itemize}
 
@@ -161,12 +160,10 @@ El diagrama en bloques del sistema se presenta en la Figura \ref{fig:diagBloques
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   & Radio Observatorio de     &    -          	&     -   	\\ \hline
+Auspiciante   & \authorname     &  FIUBA          	& Alumno   	\\ \hline
 Cliente       & \clientename      &\empclientename	& -       	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
-Equipo        & - \newline 
-				-          &   -           	&  -      	\\ \hline
 Usuario final &  Personal encargado en el sistema ABS           &              	&        	\\ \hline
 \end{tabularx}
 \end{table}
@@ -174,17 +171,17 @@ Usuario final &  Personal encargado en el sistema ABS           &              	
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-El propósito de este proyecto es desarrollar una actualización integral del Sistema de Apunte Automático (ABS) del Radio Observatorio de Jicamarca, incorporando tecnologías de Internet de las Cosas (IoT) para mejorar su capacidad de monitoreo, control y gestión remota. Esta mejora permitirá un registro más detallado de datos operativos, diagnóstico de fallas en tiempo real y una interfaz de usuario más accesible y eficiente, optimizando así el rendimiento y la disponibilidad del sistema para las exigentes investigaciones científicas que se realizan en esta instalación.
+El propósito de este proyecto es desarrollar una actualización integral del Sistema de apunte automático (ABS) del Radio Observatorio de Jicamarca, mediante la incorporación de tecnologías de Internet de las Cosas (IoT) para mejorar su capacidad de monitoreo, control y gestión remota. Esta mejora permitirá un registro detallado de datos operativos, diagnóstico de fallas en tiempo real y una interfaz de usuario más accesible y eficiente, lo que optimiza el rendimiento y la disponibilidad del sistema para las exigentes investigaciones científicas que se realizan en esta instalación.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-El alcance de este proyecto incluye el diseño, desarrollo y despliegue de una solución IoT para mejorar el Sistema de Apunte Automático (ABS) del Radio Observatorio de Jicamarca. Específicamente, se contempla:
+El alcance de este proyecto incluye el diseño, desarrollo y despliegue de una solución IoT para mejorar el Sistema de apunte automático (ABS) del Radio Observatorio de Jicamarca. Específicamente, se contempla:
 
 \begin{itemize}
 	\item La integración de un sensor de temperatura como variable inicial para monitoreo ambiental, con posibilidad de expansión para otros sensores en futuras etapas.
 
-	\item El diseño y fabricación de un shield electrónico personalizado para protección y expansión modular del sistema, asegurando aislamiento eléctrico y compatibilidad con el microcontrolador TIVA TM4C1294.
+	\item El diseño y fabricación de un shield electrónico personalizado para protección y expansión modular del sistema, lo que asegura el aislamiento eléctrico y compatibilidad con el microcontrolador TIVA TM4C1294.
 
 	\item La migración del protocolo de comunicación actual hacia MQTT para mejorar la eficiencia, escalabilidad y gestión de datos.
 
@@ -214,15 +211,15 @@ El presente proyecto no incluye:
 
 Para el desarrollo del presente proyecto se supone que:
 \begin{itemize}
-	\item El sistema actual del Radio Observatorio de Jicamarca está en condiciones operativas adecuadas para integrar las mejoras propuestas.
+	\item El sistema actual del Radio Observatorio de Jicamarca reúne las condiciones operativas requeridas para implementar las mejoras propuestas.
 
 	\item El microcontrolador TIVA TM4C1294 es compatible con el shield personalizado y los sensores adicionales que se implementarán.
 
-	\item Los sensores de temperatura y otros dispositivos de monitoreo estarán disponibles y serán compatibles con el entorno de operación del sistema ABS.
+	\item Los sensores de temperatura y dispositivos de monitoreo estarán disponibles y serán compatibles con el entorno de operación del sistema ABS.
 
 	\item El equipo de trabajo contará con acceso a las instalaciones del observatorio para pruebas, instalación y validación del sistema.
 
-	\item El protocolo MQTT es adecuado para la transmisión de datos en el entorno local del observatorio, cumpliendo con los requisitos de latencia y estabilidad.
+	\item El protocolo MQTT es adecuado para la transmisión de datos en el entorno local del observatorio, ya que cumple con los requisitos de latencia y estabilidad.
 
 	\item Se dispondrá del conocimiento técnico para diseñar e implementar las interfaces de comunicación, el shield personalizado y el sistema de almacenamiento de datos.
 
@@ -242,7 +239,7 @@ Para el desarrollo del presente proyecto se supone que:
 		\item El sistema debe permitir el monitoreo continuo de la temperatura en tiempo real. (Prioridad alta)
 		\item El sistema debe registrar y almacenar eventos críticos, fallas y cambios de apuntamiento en una base de datos local. (Prioridad alta)
 		\item El sistema debe permitir el control remoto del apuntamiento de antenas a través de una interfaz web multiplataforma. (Prioridad alta)
-		\item El sistema debe enviar notificaciones de fallas a dispositivos conectados en la red local. (Prioridad media)
+		\item El sistema debe enviar notificaciones de fallas, tales como la pérdida de conexión, error en el apunte o incremento de temperatura, hacia los dispositivos conectados en la red local. (Prioridad media)
 		\item La interfaz web debe ser compatible con navegadores modernos y adaptarse a dispositivos móviles. (Prioridad media)
 		\item El sistema debe permitir la descarga de registros históricos en formato CSV o similar para análisis externo. (Prioridad media)
 	\end{enumerate}
@@ -253,6 +250,7 @@ Para el desarrollo del presente proyecto se supone que:
 		\item Incluir un sensor de temperatura compatible con el microcontrolador. (Prioridad alta)
 		\item  Fuente de alimentación y conversión de medios (fibra a Ethernet) para garantizar conectividad estable. (Prioridad alta)
 	\end{enumerate}
+\newpage
 	\item Requerimientos de Comunicación:
 	\begin{enumerate}
 		\item Implementación del protocolo MQTT para intercambio de datos entre el microcontrolador y los dispositivos conectados. (Prioridad alta)
@@ -288,20 +286,28 @@ Para el desarrollo del presente proyecto se supone que:
 \label{sec:backlog}
 
 \begin{enumerate}
-	\item Como operador del sistema, quiero poder monitorear la temperatura en tiempo real para detectar condiciones adversas y evitar daños en los equipos.
+	\item Como operador del sistema, quiero monitorear la temperatura en tiempo real para detectar condiciones adversas y evitar daños en los equipos.
+	
+Cálculo: 3 + 2 + 3 = 8 -> número Fibonacci más cercano hacia arriba = 8. 
 	
 	\textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
 	
-	\item Como ingeniero electrónico, quiero poder registrar y visualizar el historial de fallas para diagnosticar problemas rápidamente.
+	\item Como ingeniero electrónico, quiero registrar y visualizar el historial de fallas para diagnosticar problemas rápidamente.
 	
-	\textit{Story points}: 10 (complejidad: 4, dificultad: 3, incertidumbre: 3)
+Cálculo: 4 + 3 + 3 = 10 -> número Fibonacci más cercano hacia arriba = 13. 
 	
-	\item Como operador, quiero poder descargar los registros históricos para análisis detallado fuera de línea.
+	\textit{Story points}: 13 (complejidad: 4, dificultad: 3, incertidumbre: 3)
 	
-	\textit{Story points}: 7 (complejidad: 2, dificultad: 2, incertidumbre: 3)
+	\item Como operador, quiero descargar los registros históricos para realizar un análisis detallado fuera de línea.
+
+Cálculo: 2 + 2 + 3 = 7 -> número Fibonacci más cercano hacia arriba = 8. 
+	
+	\textit{Story points}: 8 (complejidad: 2, dificultad: 2, incertidumbre: 3)
 	
 	\item Como usuario del sistema, quiero acceder a la interfaz web desde cualquier dispositivo para monitorear y controlar las funciones del sistema de forma conveniente.
-	
+
+Cálculo: 3 + 3 + 3 = 9 -> número Fibonacci más cercano hacia arriba = 13. 
+
 	\textit{Story points}: 9 (complejidad: 3, dificultad: 3, incertidumbre: 3)
 	
 \end{enumerate}
@@ -424,7 +430,7 @@ Para el diagrama de Gantt se consideró una dedicación parcial promedio de 3 hs
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-La moneda utilizada en el presupuesto es el dólar. Siendo el tipo de cambio de 1 dólar a 1306.57 pesos argentinos en la fecha de 21 de agosto del 2025.
+La moneda utilizada en el presupuesto es el dólar. Al 21 de agosto de 2025, el tipo de cambio de 1 dólar a 1306,57 pesos argentinos.
 
 \begin{table}[htpb]
 \centering
@@ -437,7 +443,7 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-Mano de obra  &
+Hora de ingeniería  &
   \multicolumn{1}{c|}{658} & 
   \multicolumn{1}{c|}{\$ 4.00} &
   \multicolumn{1}{c|}{\$ 2632} \\ \hline
@@ -527,11 +533,11 @@ b) Tabla de gestión de riesgos: (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-     1 & 9 & 3 &  27 &    &    &      \\ \hline
-     2 & 8 & 3 &  24 &    &    &      \\ \hline
-     3 & 7 & 4 &  28 &    &    &      \\ \hline
-     4 & 6 & 6 &  36 & 5  & 2  & 10   \\ \hline
-     5 & 10 & 5 & 50 & 5  & 5  & 25   \\ \hline
+     Riesgo 1: fallo en el microcontrolador TIVA TM4C1294 & 9 & 3 &  27 &    &    &      \\ \hline
+     Riesgo 2: interferencia en la comunicación MQTT & 8 & 3 &  24 &    &    &      \\ \hline
+     Riesgo 3: daño físico al shield personalizado & 7 & 4 &  28 &    &    &      \\ \hline
+     Riesgo 4: fallo en los sensores de temperatura & 6 & 6 &  36 & 5  & 2  & 10   \\ \hline
+     Riesgo 5: problemas de seguridad en la red local & 10 & 5 & 50 & 5  & 5  & 25   \\ \hline
 \end{tabularx}%
 \end{table}
 
@@ -546,18 +552,18 @@ c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo
 Riesgo 4: fallo en los sensores de temperatura.
   \begin{itemize}
   	\item Plan de mitigación: Utilizar sensores de mayor calidad con certificación industrial para mayor precisión y durabilidad.
-	\item Severidad (S): 5. \\ 
+	\item Severidad (S*): 5. \\ 
 	La severidad es moderada, si el sistema utiliza unos sensores certificados.
-	\item Probabilidad de ocurrencia (O): 2. \\
+	\item Probabilidad de ocurrencia (O*): 2. \\
 	La probabilidad de ocurrencia es baja, porque se usarán sensores que están en el inventario.
 	\end{itemize}
 \newpage
 Riesgo 5: problemas de seguridad en la red local.
 \begin{itemize}
 	\item Plan de mitigación: Implementar cifrado de datos en tránsito usando TLS/SSL en las comunicaciones MQTT.
-	\item Severidad (S): 5. \\ 
+	\item Severidad (S*): 5. \\ 
 	La severidad es moderada, si el sistema logra cifrar la data adquirida.
-	\item Probabilidad de ocurrencia (O): 5. \\
+	\item Probabilidad de ocurrencia (O*): 5. \\
 	Es poco probable, pero se utilizará servicios ya utilizados en el radio observatorio.
 \end{itemize}   
 
@@ -566,14 +572,14 @@ Riesgo 5: problemas de seguridad en la red local.
 
 \begin{itemize} 
 
-\item Req 1.1: El sistema debe permitir el monitoreo continuo de la temperatura en tiempo real.
+\item Req 1.1: el sistema debe permitir el monitoreo continuo de la temperatura en tiempo real.
 
 \begin{itemize}
-	\item Verificación: \\ Se conectará el sensor de temperatura al microcontrolador y se registrará la lectura en intervalos de 1 segundo. Se utilizará un sensor patrón para comparar los valores medidos. Se revisará el código para asegurar lectura continua y estabilidad.
-	\item 	Validación: \\ Se presentará al cliente la interfaz web mostrando la temperatura en tiempo real, utilizando una pistola termómetro para comparar el valor en vivo con una referencia externa.
+	\item Verificación: \\ Se conectará el sensor de temperatura al microcontrolador y se registrará la lectura en intervalos de cada 5 minutos. Se utilizará un sensor patrón para comparar los valores medidos. Se revisará el código para asegurar lectura continua y estabilidad.
+	\item 	Validación: \\ Se presentará al cliente la interfaz web en la que se mostrará la temperatura en tiempo real, utilizando una pistola termómetro para comparar el valor en vivo con una referencia externa.
 \end{itemize}
 
-\item Req 1.2: El sistema debe registrar y almacenar eventos críticos, fallas y cambios de apuntamiento en una base de datos local.
+\item Req 1.2: el sistema debe registrar y almacenar eventos críticos, fallas y cambios de apuntamiento en una base de datos local.
 
 \begin{itemize}
 	\item Verificación: \\ Se forzarán eventos simulados (fallas de conexión, cambio de apuntamiento) y se verificará que los datos se registren correctamente en la base de datos.
@@ -582,7 +588,7 @@ Riesgo 5: problemas de seguridad en la red local.
 
 \end{itemize}
 
-\item Req 1.3: El sistema debe permitir el control remoto del apuntamiento de antenas a través de una interfaz web multiplataforma.
+\item Req 1.3: el sistema debe permitir el control remoto del apuntamiento de antenas a través de una interfaz web multiplataforma.
 
 \begin{itemize}
 	\item Verificación: \\ Se probará el control remoto desde distintos dispositivos en la red local. Se inspeccionará el código del backend y las señales eléctricas enviadas a los relés de apuntamiento.
@@ -590,34 +596,34 @@ Riesgo 5: problemas de seguridad en la red local.
 	\item Validación: \\ El cliente controlará el sistema desde una PC y un smartphone y observará que el cambio de apuntamiento se refleja correctamente en el hardware.
 \end{itemize}
 \newpage
-\item Req 1.4: El sistema debe enviar notificaciones de fallas a dispositivos conectados en la red local.
+\item Req 1.4: el sistema debe enviar notificaciones de fallas a dispositivos conectados en la red local.
 \begin{itemize}
 	\item Verificación: \\ Se simularán condiciones de falla (desconexión de sensores, sobrecarga) y se verificará que los mensajes MQTT lleguen a los suscriptores configurados.
 
 	\item Validación: \\ El cliente recibirá notificaciones en tiempo real en su panel de usuario y confirmará que reflejan el estado del sistema.
 \end{itemize}
 
-\item Req 1.5: La interfaz web debe permitir el acceso desde computadoras, tablets y smartphones.
+\item Req 1.5: la interfaz web debe permitir el acceso desde computadoras, tablets y smartphones.
 \begin{itemize}
 	\item Verificación: \\ Se probará la interfaz en múltiples dispositivos y navegadores (Chrome, Firefox, Safari) y se verificará la adaptación responsiva del diseño.
 	
 	\item Validación: \\ El cliente probará la interfaz desde sus propios dispositivos para confirmar compatibilidad y usabilidad.
 \end{itemize}
 
-\item Req 1.6: El sistema debe permitir la descarga de registros históricos en formato CSV.
+\item Req 1.6: el sistema debe permitir la descarga de registros históricos en formato CSV.
 \begin{itemize}
 	\item Verificación: \\ Se generará un archivo CSV desde la interfaz, se verificará que contiene los campos esperados y se abrirá en Excel para comprobar estructura.
 
 	\item Validación: \\ El cliente descargará el archivo y lo usará para realizar un análisis básico de fallas y eventos. Confirmará que los datos están completos y claros.
 \end{itemize}
-\item Req 2.2: El shield personalizado debe proteger y facilitar la conexión de sensores.
+\item Req 2.2: el shield personalizado debe proteger y facilitar la conexión de sensores.
 \begin{itemize}
 	\item Verificación: \\ Se realizará una revisión de diseño del esquemático y se probarán las entradas con distintas tensiones para confirmar aislamiento.
 
-	\item Validación: \\ Se mostrará al cliente el funcionamiento estable del sistema durante las pruebas de campo, confirmando que los sensores funcionan correctamente sin daño al microcontrolador.
+	\item Validación: \\ Se mostrará al cliente el funcionamiento estable del sistema durante las pruebas de campo, para confirmar que los sensores funcionan correctamente sin daño al microcontrolador.
 \end{itemize}
 
-\item Req 3.1: Implementación del protocolo MQTT para intercambio de datos entre el microcontrolador y los dispositivos conectados.
+\item Req 3.1: implementación del protocolo MQTT para intercambio de datos entre el microcontrolador y los dispositivos conectados.
 
 \begin{itemize}
 	\item Verificación: \\ Se revisará el código fuente para confirmar el uso del cliente MQTT, y se capturarán paquetes con Wireshark para comprobar el protocolo.
@@ -625,16 +631,16 @@ Riesgo 5: problemas de seguridad en la red local.
 	\item Validación: \\ El cliente recibirá datos vía MQTT en una aplicación externa compatible (ej. MQTT Explorer), validando que la comunicación es funcional.
 \end{itemize}
 
-\item Req 4.1: Desarrollo de una aplicación web para gestión y visualización de datos.
+\item Req 4.1: desarrollo de una aplicación web para gestión y visualización de datos.
 \begin{itemize}
 	\item Verificación: \\ Se revisará el código fuente de la aplicación web (HTML, CSS, JavaScript, backend) para comprobar que incluye todos los módulos requeridos.
 	
 	\item Validación: \\ El cliente utilizará la aplicación web en diferentes dispositivos (PC, tablet, smartphone) y verificará que puede acceder a las funcionalidades críticas del sistema.
 	\end{itemize}
 	
-\item Req 4.2: Uso de contenedores Docker para facilitar la portabilidad y mantenimiento del servidor de datos.
+\item Req 4.2: uso de contenedores Docker para facilitar la portabilidad y mantenimiento del servidor de datos.
 \begin{itemize}
-	\item Verificación: \\ Se examinará el archivo Dockerfile y los docker-compose.yml utilizados, asegurando que el sistema se construya correctamente en un entorno limpio. 
+	\item Verificación: \\ Se examinará el archivo Dockerfile y los docker-compose.yml utilizados, lo que asegura que el sistema se construya correctamente en un entorno limpio. 
 
 	\item Validación: \\ Se considerará validado si el cliente puede ejecutar el sistema sin complicaciones, accede a la interfaz y confirma que todos los servicios están operativos tras la instalación.
 \end{itemize}
@@ -652,7 +658,7 @@ Se contemplan las siguientes actividades una vez finalizado al cierre del proyec
 		\item Responsable: William’s Limonchi.
 		\item Actividad: 
 		\begin{itemize}
-			\item Se comparará el cronograma real del proyecto con el cronograma inicial planificado, utilizando la documentación de seguimiento y los registros de avance por tareas.
+			\item Se comparará el cronograma real del proyecto con el cronograma inicial planificado, a partir de la documentación de seguimiento y los registros de avance por tareas.
 			\item Se verificará el cumplimiento de los requerimientos definidos mediante una lista de cotejo cruzada con los entregables.
 		\end{itemize}
 	\end{itemize}
